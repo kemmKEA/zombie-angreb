@@ -1,7 +1,7 @@
 :root {
   /* Colours */
-  --primary-bg-color: #e8ebee; /* used */
-  --primary-font-color: #474d52; /* used */
+  --primary-bg-color: #fceb94;
+  --primary-font-color: #000000; /* used */
 
   --secondary-bg-color: #5d656c; /* used */
   --secondary-font-color: #d5e5f4; /* used */
@@ -16,27 +16,27 @@
   --danger-color: #dc3545;
 
   /* Borders */
-  --border-color: #007bff; /* used */
-  --border-color-light: #f7f5c2; /* used */
-  --border-radius: 0.25rem;
+  --border-color: none; /* used */
+  --border-color-light: none; /* used */
+  --border-radius: 37px;
 
   /* Links */
-  --link-color: #84888e; /* used */
+  --link-color: #fffae2; /* used */
   --hover-color: #f9fcfe; /* used */
   --active-color: #f52727; /* used */
 
   /* From styletile */
 
   /* Fonts */
-  --logotype-font: "Roboto", sans-serif;
-  --headline-font: "Roboto", sans-serif;
-  --body-font: "Roboto", sans-serif;
-  --link-font: "Calibri", sans-serif;
+  --logotype-font: "Rubrik", sans-serif;
+  --headline-font: "Rubrik", sans-serif;
+  --body-font: "Rubrik", sans-serif;
+  --link-font: "Rubrik", sans-serif;
 
   /* Text sizes */
   --logotype-size: 1.5rem;
-  --headline1-size: 2rem;
-  --headline2-size: 1.5rem;
+  --headline1-size: 2.2rem;
+  --headline2-size: 2rem;
   --headline3-size: 1.25rem;
   --bodytext-size: 1rem;
   --cta-text-size: 1.25rem;
@@ -44,34 +44,34 @@
   --form-submit-size: 1rem;
 
   /* Text colors */
-  --logotype-color: #ffffff;
-  --headline-color: #bbc3ca;
-  --headline-color-inverted: #f9fcfe;
+  --logotype-color: #fffae2;
+  --headline-color: #fffae2;
+  --headline-color-inverted: #fffae2;
   --bodytext-color: #575c61;
   --bodytext-color-inverted: #f9fcfe;
-  --cta-text-color: #bbc3ca;
+  --cta-text-color: #000000;
   --cta-text-color-inverted: #bbc3ca;
-  --followup-text-color: #575c61;
+  --followup-text-color: #fffae2;
   --followup-text-color-inverted: #bbc3ca;
   --formfield-text-color: #575c61;
   --form-submit-color: #bbc3ca;
   --form-submit-color-inverted: #bbc3ca;
 
   /* Background colors */
-  --logotype-background-color: #a9aaae;
-  --header-background-color: #cfd5e5;
-  --article-background-color: #dbdde3;
-  --news-background-color: #dbdde3;
-  --news-background-color-inverted: #eeebe9;
-  --info-background-color: #dbdde3;
-  --headline-bg-color: #dbdde3;
-  --headline-bg-color-alert: #dbdde3;
-  --headline-bg-color-inverted: #dbdde3;
-  --bodytext-bg-color: #dbdde3;
-  --bodytext-bg-color-inverted: #dbdde3;
-  --cta-text-bg-color: #dbdde3;
+  --logotype-background-color: #000000;
+  --header-background-color: #6f90eb;
+  --article-background-color: #fffae2;
+  --news-background-color: #fffae2;
+  --news-background-color-inverted: #dbe2f5;
+  --info-background-color: rgb(255, 255, 255);
+  --headline-bg-color: #ff4b00;
+  --headline-bg-color-alert: #ff4b00;
+  --headline-bg-color-inverted: #000000;
+  --bodytext-bg-color: #ffffff;
+  --bodytext-bg-color-inverted: #dbe2f5;
+  --cta-text-bg-color: #ff4b00;
   --cta-text-bg-color-inverted: #dbdde3;
-  --followup-text-bg-color: #e8ebee;
+  --followup-text-bg-color: #ff0000;
   --followup-text-bg-color-inverted: #dbdde3;
   --form-background-color: #c5c7ce;
   --form-text-color: #dbdde3;
@@ -81,6 +81,6 @@
   --form-submit-bg-color-inverted: #dbdde3;
 
   /* Info-boxes */
-  --info-bg-color-yellow: #d6d5ce;
-  --info-bg-color-green: #a6a6a0;
+  --info-bg-color-yellow: #f8cf00;
+  --info-bg-color-green: #def5db;
 }
