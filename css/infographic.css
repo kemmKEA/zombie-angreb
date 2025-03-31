@@ -29,3 +29,18 @@
   margin: 0 0 1.2rem 0;
   padding: 0;
 }
+
+.hide {
+  visibility: hidden;
+}
+.fadeIn {
+  animation: fadeIn 1.5s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
