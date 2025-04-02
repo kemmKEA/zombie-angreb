@@ -1,12 +1,119 @@
 #webform {
   background-color: var(--form-background-color);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  /* accent-color: #ff4b00; */
+}
+
+fieldset {
+  background-color: #dbe2f5;
+  border: 1px solid #dbdde3;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+input,
+select,
+textarea,
+range {
+  background-color: var(--formfield-background-color);
+  color: var(--formfield-text-color);
+  border: 1px solid var(--formfield-background-color);
+  padding: 0.2rem;
+  font-size: 0.9rem;
+}
+
+input:invalid:focus,
+textarea:invalid:focus,
+select:invalid:focus {
+  outline: none;
+  /* border: 1px solid red; */
+  box-shadow: 0 0 10px red;
+}
+
+input:user-invalid {
+  border: 2px solid red;
+}
+
+form p {
+  font-size: 0.9rem;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+}
+
+.formcontainer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#where .form-group {
+  margin-right: 1rem;
+}
+#what .form-group {
+  margin-right: 2rem;
+}
+#contact .formcontainer {
+  gap: 1rem;
+}
+
+#what label {
+  display: block;
+}
+
+#zombie-info {
+  background-color: #6f90eb;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 10px;
+  visibility: hidden; /* Make it invisible */
+}
+
+#zombie-info.visible {
+  visibility: visible; /* Make it visible */
+}
+
+#location-number,
+#location-zipcode {
+  max-width: 55px;
+}
+
+h3 {
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+.blok {
+  display: block;
+  margin-bottom: 0.1rem;
 }
 
 #form-section,
 #form-summary {
   background-color: var(--info-background-color);
+  padding: 0 1rem;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+legend {
+  font-size: 0.9rem;
+  font-weight: bold;
+  line-height: 1rem;
+  margin: 0.5rem 0;
   padding: 0;
 }
+button {
+  background-color: var(--form-submit-bg-color);
+  color: var(--form-submit-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin: 0 0 1rem;
+}
+
 #form-summary h2 {
   line-height: 3rem;
   text-align: center;
@@ -29,4 +136,37 @@
   line-height: 1.3;
   margin: 0 0 1.2rem 0;
   padding: 0;
+}
+textarea {
+  width: 100%;
+  max-width: 620px;
+  height: 60px; /* Optional: Control the height */
+  padding: 0.5rem; /* Add padding for better usability */
+  resize: vertical; /* Allow only vertical resizing (optional) */
+}
+
+input::placeholder {
+  color: var(--formfield-placeholder-color);
+}
+
+/* styling af date-field*/
+/* Kommer kun frem hvis man har klikket nej i radiobutton */
+/* ****************************************************** */
+
+#observation-date .form-group {
+  display: flex;
+  gap: 1rem;
+}
+
+#date-field {
+  margin-top: 1.5rem;
+}
+
+/* Styling af farlighedsniveau (danger range) */
+/* ******************************* */
+
+#danger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
