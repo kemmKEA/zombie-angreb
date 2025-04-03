@@ -169,4 +169,15 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  /* accent-color: red; */
+  transition: all 1.5s;
+}
+input[type="range"] {
+  appearance: none;
+  width: 100%;
+  height: 15px;
+  outline: none;
+  border-radius: 5px;
+  background-color: var(--info-color);
+  transition: all 1.5s;
 }
