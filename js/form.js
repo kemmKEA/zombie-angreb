@@ -23,3 +23,52 @@ function updateValue() {
     slider.style.backgroundColor = "var(--info-color)";
   }
 }
+
+// ***************************************************************************
+// Summary kode
+// ***************************************************************************
+
+// resetter formen fra starten
+document.querySelector("#webform").reset();
+
+// Eventlistnere på knapperne
+document.querySelector("#reset_btn").addEventListener("click", reset);
+document.querySelector("#submit_btn").addEventListener("click", submitForm);
+
+// Sender value af inputfelterne til Summary
+function submitForm() {
+  // viser Summary
+  document.querySelector("#sum").style.display = "block";
+
+  // forskellige inputfelter
+  document.querySelector("#location-street").textContent = document.querySelector("#location-street").value;
+  document.querySelector("#sumNumber").textContent = document.querySelector("#location-number").value;
+
+  // select - option
+  document.querySelector("#sumType").textContent = document.querySelector("#zombie-type").value;
+
+  // radiobuttons
+  document.querySelector("#sumAntal").textContent = document.querySelector('input[name="zombie-count"]:checked').value;
+
+  // checkboxe ------------------------------------------------------------
+  const checkboxes = document.querySelectorAll('input[name="behavior"]:checked');
+
+  // Laver et array
+  const myArray = [];
+
+  // Kalder funktionen lavListe for hvert element i checkboxes
+  checkboxes.forEach(lavListe);
+
+  // Pusher elementerne ind i myArray
+  function lavListe(element) {
+    myArray.push(element.value);
+  }
+  // Putter arrayet ind i summary og separerer med komma og mellemrum
+  document.querySelector("#sumBehaviour").textContent = myArray.join(", ");
+}
+
+// Resetter Formen og skjuler Summary
+function reset() {
+  document.querySelector("#webform").reset();
+  document.querySelector("#sum").style.display = "none";
+}
