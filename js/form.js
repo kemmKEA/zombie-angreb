@@ -53,6 +53,10 @@ function submitForm() {
   // checkboxe ------------------------------------------------------------
   const checkboxes = document.querySelectorAll('input[name="behavior"]:checked');
 
+  // Console log der viser hvad value er for vores checkbokse. (Man får kun en log
+  // hvis man har udfyldt alle required input og tjekket en eller flere checkbokse af)
+  console.log(checkboxes);
+
   // Laver et array
   const myArray = [];
 
