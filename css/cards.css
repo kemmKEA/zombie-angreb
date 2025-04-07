@@ -1,3 +1,14 @@
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--headline-font);
+  color: var(--headline-color);
+}
+p {
+  font-family: var(--body-font);
+  color: var(--bodytext-color);
+}
 .daily_card {
   background-color: var(--article-background-color);
   display: grid;
@@ -28,7 +39,7 @@
 }
 .daily_img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 .news_card {
@@ -43,7 +54,7 @@
 .news_card:nth-child(2n) {
   background-color: var(--news-background-color-inverted);
 }
-.news_card > * {
+.news_card > *:not(img) {
   padding: 0 1rem;
 }
 .news_card h3 {
@@ -87,4 +98,55 @@
 .cta_btn:after {
   content: "\2192";
   margin-left: 0.5rem;
+}
+
+::backdrop {
+  backdrop-filter: blur(5px);
+}
+dialog + button {
+  width: max-content;
+  margin-left: 1rem;
+}
+
+button {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+button:active {
+  position: relative;
+  box-shadow: none;
+  translate: 2px 2px;
+}
+dialog {
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--form-background-color);
+  color: var(--form-text-color);
+  padding: 2rem;
+  margin: minmax(1rem, auto);
+  width: clamp(30ch, 80%, 600px);
+  animation: flyIn 0.5s ease-in-out;
+}
+@keyframes flyIn {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 0.95;
+    /* rotate: 360deg; */
+  }
+}
+dialog h4 {
+  margin: 1.5rem 0 1rem 0;
+  font-size: var(--headline3-size);
+}
+dialog form {
+  margin: 0 1rem 2rem 0;
+}
+dialog img {
+  width: 40%;
+  float: left;
+  margin-right: 0.5rem;
+  padding-bottom: 0.5rem;
 }
