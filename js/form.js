@@ -41,8 +41,10 @@ function submitForm() {
   document.querySelector("#sum").style.display = "block";
 
   // forskellige inputfelter
-  document.querySelector("#location-street").textContent = document.querySelector("#location-street").value;
+  document.querySelector("#sumStreet").textContent = document.querySelector("#location-street").value;
   document.querySelector("#sumNumber").textContent = document.querySelector("#location-number").value;
+  document.querySelector("#sumCity").textContent = document.querySelector("#location_city").value;
+  document.querySelector("#sumZip").textContent = document.querySelector("#location_zipcode").value;
 
   // select - option
   document.querySelector("#sumType").textContent = document.querySelector("#zombie-type").value;
@@ -53,26 +55,31 @@ function submitForm() {
   // checkboxe ------------------------------------------------------------
   const checkboxes = document.querySelectorAll('input[name="behavior"]:checked');
 
-  // Console log der viser hvad value er for vores checkbokse. (Man får kun en log
-  // hvis man har udfyldt alle required input og tjekket en eller flere checkbokse af)
-  console.log(checkboxes);
-
   // Laver et array
   const myArray = [];
 
   // Kalder funktionen lavListe for hvert element i checkboxes
   checkboxes.forEach(lavListe);
 
-  // Pusher elementerne ind i myArray
+  // Pusher værdien af elementerne fra nodelisten ind i myArray
   function lavListe(element) {
     myArray.push(element.value);
   }
   // Putter arrayet ind i summary og separerer med komma og mellemrum
   document.querySelector("#sumBehaviour").textContent = myArray.join(", ");
+
+  // resterende elementer
+  document.querySelector("#sumDanger").textContent = document.querySelector("#farlighed").value;
+  document.querySelector("#sumStory").textContent = document.querySelector("#beskrivelse").value;
+  document.querySelector("#sumName").textContent = document.querySelector("#name").value;
+  document.querySelector("#sumEmail").textContent = document.querySelector("#email").value;
+  document.querySelector("#sumCode").textContent = document.querySelector("#area-code").value;
+  document.querySelector("#sumPhone").textContent = document.querySelector("#telefon").value;
 }
 
 // Resetter Formen og skjuler Summary
 function reset() {
   document.querySelector("#webform").reset();
   document.querySelector("#sum").style.display = "none";
+  // location.reload(false);
 }

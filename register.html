@@ -68,15 +68,15 @@
               </div>
               <div class="form-group">
                 <label class="blok" for="location-number">Husnr.</label>
-                <input id="location-number" name="location-number" type="text" placeholder="fx 29" />
+                <input id="location-number" name="location-number" type="text" />
               </div>
               <div class="form-group">
                 <label class="blok" for="location_city">By</label>
-                <input id="location_city" name="location_city" type="text" placeholder="fx København" required />
+                <input id="location_city" name="location_city" type="text" required />
               </div>
               <div class="form-group">
                 <label class="blok" for="location-zipcode">Postnr.</label>
-                <input id="location-zipcode" name="location-zipcode" type="text" pattern="\d{4}" placeholder="fx 2400" />
+                <input id="location_zipcode" name="location_zipcode" type="text" pattern="\d{4}" />
               </div>
             </div>
           </fieldset>
@@ -243,6 +243,30 @@
           <div>
             <h3>Adfærd:</h3>
             <p id="sumBehaviour"></p>
+          </div>
+          <div>
+            <h3>Farlighed:</h3>
+            <p id="sumDanger"></p>
+          </div>
+          <div>
+            <h3>Beskrivelse:</h3>
+            <p id="sumStory"></p>
+          </div>
+          <div>
+            <h3>Navn:</h3>
+            <p id="sumName"></p>
+          </div>
+          <div>
+            <h3>Email</h3>
+            <p id="sumEmail"></p>
+          </div>
+          <div>
+            <h3>Landekode:</h3>
+            <p id="sumCode"></p>
+          </div>
+          <div>
+            <h3>Telefon:</h3>
+            <p id="sumPhone"></p>
           </div>
           <button id="reset_btn" type="reset">Godkend og luk</button>
         </article>
