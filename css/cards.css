@@ -113,7 +113,10 @@ dialog {
   margin: minmax(1rem, auto);
   width: clamp(30ch, 80%, 600px);
   animation: flyIn 0.5s ease-in-out;
+  overflow: auto;
+  overscroll-behavior: contain;
 }
+
 dialog h4 {
   margin: 1.5rem 0 1rem 0;
   font-size: var(--headline3-size);

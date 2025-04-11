@@ -1,17 +1,17 @@
 // Version 1: One breaking only
 // **********************************************
-const openBtn = document.querySelector(".news_card .read-more");
-const closeBtn = document.querySelector(".news_card dialog button");
-const dialog = document.querySelector(".news_card dialog");
-openBtn.addEventListener("click", openDialog);
-closeBtn.addEventListener("click", closeDialog);
+// const openBtn = document.querySelector(".news_card .read-more");
+// const closeBtn = document.querySelector(".news_card dialog button");
+// const dialog = document.querySelector(".news_card dialog");
+// openBtn.addEventListener("click", openDialog);
+// closeBtn.addEventListener("click", closeDialog);
 
-function openDialog() {
-  dialog.showModal();
-}
-function closeDialog() {
-  dialog.close();
-}
+// function openDialog() {
+//   dialog.showModal();
+// }
+// function closeDialog() {
+//   dialog.close();
+// }
 // **********************************************
 
 // Version 2: with 3 sets of functions to make 3 breaking news work
@@ -41,6 +41,7 @@ function closeDialog() {
 // function closeDialog2() {
 //   dialog2.close();
 // }
+
 // const openBtn3 = document.querySelector(".news_card:nth-child(3) .read-more");
 // const closeBtn3 = document.querySelector(".news_card:nth-child(3) dialog button");
 // const dialog3 = document.querySelector(".news_card:nth-child(3) dialog");
@@ -58,13 +59,14 @@ function closeDialog() {
 // Version 3: Using querySelectorAll and forEach to make it work for several breaking news
 // **********************************************
 // function setupArticle(article) {
-//   const openBtn = article.querySelector(".read-more");
+//   const openBtn = article.querySelector("article > button");
 //   const dialog = article.querySelector("dialog");
-//   const closeBtn = dialog.querySelector(".close-dialog");
+//   const closeBtn = article.querySelector(".close-dialog");
 
-//   openBtn.addEventListener("click", function () {
+//   openBtn.addEventListener("click", openDia);
+//   function openDia() {
 //     dialog.showModal();
-//   });
+//   }
 
 //   closeBtn.addEventListener("click", function () {
 //     dialog.close();
@@ -73,6 +75,11 @@ function closeDialog() {
 
 // const articles = document.querySelectorAll(".news_card");
 
+// articles.forEach(setupArticle);
+
+// articles.forEach((article) => {
+//   setupArticle(article);
+// });
 // articles.forEach(function (article) {
 //   setupArticle(article);
 // });
