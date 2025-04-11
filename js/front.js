@@ -94,4 +94,28 @@
 //   openBtn.addEventListener("click", () => dialog.showModal());
 //   closeBtn.addEventListener("click", () => dialog.close());
 // });
-// **********************************************
+// **************************************************************
+
+// **************************************************************
+// Javascript til Teaser - Cards: panorama animation
+// **************************************************************
+
+// Tilføjer animationsklassen pan_animation til div med id=pan
+document.querySelector("#pan").classList.add("pan_animation");
+
+// Tilføjer classen stop til div med id=pan (så animationen er pauset fra start)
+document.querySelector("#pan").classList.add("stop");
+
+// Kalder funktionen startPanorame hvis musen er over billedet
+document.querySelector("#pan").addEventListener("mouseover", startPanorama);
+function startPanorama() {
+  // Fjerner classen stop fra div'en så animationen kan køre igen
+  this.classList.remove("stop");
+}
+
+// Kalder funktionen stopPanorame når musen fjernes fra billedet
+document.querySelector("#pan").addEventListener("mouseout", stopPanorama);
+function stopPanorama() {
+  // Tilføjer classen stop til div'en så animationen stopper
+  this.classList.add("stop");
+}
