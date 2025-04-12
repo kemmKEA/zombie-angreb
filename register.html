@@ -37,7 +37,6 @@
           </p>
         </article>
         <h3>Indberet Zombie-observation</h3>
-
         <form id="webform">
           <!-- Hvornår -->
           <!-- <fieldset id="when">
@@ -106,23 +105,23 @@
               <!-- Section for selecting the number of zombies observed -->
               <p>Hvor mange Zombier så du?</p>
               <div>
-                <input type="radio" id="zombie-count-1" name="zombie-count" value="1" required />
+                <input type="radio" id="zombie-count-1" name="antal" value="1" required />
                 <label for="zombie-count-1">1</label>
               </div>
               <div>
-                <input type="radio" id="zombie-count-2-4" name="zombie-count" value="2-4" required />
+                <input type="radio" id="zombie-count-2-4" name="antal" value="2-4" required />
                 <label for="zombie-count-2-5">2-5</label>
               </div>
               <div>
-                <input type="radio" id="zombie-count-5-10" name="zombie-count" value="5-10" required />
+                <input type="radio" id="zombie-count-5-10" name="antal" value="5-10" required />
                 <label for="zombie-count-5-10">5-10</label>
               </div>
               <div>
-                <input type="radio" id="zombie-count-many" name="zombie-count" value="Flere end 10" required />
+                <input type="radio" id="zombie-count-many" name="antal" value="Flere end 10" required />
                 <label for="zombie-count-flere-end-ti">Flere end 10</label>
               </div>
               <div>
-                <input type="radio" id="zombie-count-uncountable" name="zombie-count" value="Så mange at jeg ikke kunne tælle dem" required />
+                <input type="radio" id="zombie-count-uncountable" name="antal" value="Så mange at jeg ikke kunne tælle dem" required />
                 <label for="zombie-count-uncountable">Så mange at jeg ikke kunne tælle dem</label>
               </div>
             </div>
@@ -145,24 +144,24 @@
                 <label for="behavior3">Udstødte lyde (som fx grynt eller støn)</label>
               </div>
               <div>
-                <input type="checkbox" id="behavior5" name="behavior" value="Gik direkte efter mennesker uden opfordring" />
-                <label for="behavior5">Gik direkte efter mennesker uden opfordring</label>
+                <input type="checkbox" id="behavior4" name="behavior" value="Gik direkte efter mennesker uden opfordring" />
+                <label for="behavior4">Gik direkte efter mennesker uden opfordring</label>
               </div>
               <div>
-                <input type="checkbox" id="behavior6" name="behavior" value="Stirrede tomt uden at blinke" />
-                <label for="behavior6">Stirrede tomt uden at blinke</label>
+                <input type="checkbox" id="behavior5" name="behavior" value="Stirrede tomt uden at blinke" />
+                <label for="behavior5">Stirrede tomt uden at blinke</label>
               </div>
               <div>
-                <input type="checkbox" id="behavior8" name="behavior" value="Viste tegn på at huske tidligere rutiner (f.eks. stiller sig i kø)" />
-                <label for="behavior8">Viste tegn på at huske tidligere rutiner (f.eks. stiller sig i kø)</label>
+                <input type="checkbox" id="behavior6" name="behavior" value="Viste tegn på at huske tidligere rutiner (f.eks. stiller sig i kø)" />
+                <label for="behavior6">Viste tegn på at huske tidligere rutiner (f.eks. stiller sig i kø)</label>
               </div>
               <div>
-                <input type="checkbox" id="behavior9" name="behavior" value="Udviste flokadfærd (kom i gruppe, fulgte andre zombier)" />
-                <label for="behavior9">Udviste flokadfærd (kom i gruppe, fulgte andre zombier)</label>
+                <input type="checkbox" id="behavior7" name="behavior" value="Udviste flokadfærd (kom i gruppe, fulgte andre zombier)" />
+                <label for="behavior7">Udviste flokadfærd (kom i gruppe, fulgte andre zombier)</label>
               </div>
               <div>
-                <input type="checkbox" id="behavior10" name="behavior" value="Ingen reaktion på smerte eller skade<" />
-                <label for="behavior10">Ingen reaktion på smerte eller skade</label>
+                <input type="checkbox" id="behavior8" name="behavior" value="Ingen reaktion på smerte eller skade" />
+                <label for="behavior8">Ingen reaktion på smerte eller skade</label>
               </div>
             </div>
           </fieldset>
@@ -197,7 +196,8 @@
                 <div class="form-group">
                   <label for="area-code" class="blok">Land</label>
                   <select id="area-code" name="area-code">
-                    <option value="+45" selected>+45(DK)</option>
+                    <option value="" disabled selected>Vælg</option>
+                    <option value="+45">+45(DK)</option>
                     <option value="+46">+46(SE)</option>
                     <option value="+47">+47(NO)</option>
                   </select>
@@ -272,6 +272,7 @@
         </article>
       </section>
     </main>
+
     <footer>
       <nav class="some">
         <ul>
@@ -298,6 +299,6 @@
         </ul>
       </nav>
     </footer>
-    <script src="js/form.js"></script>
+    <script defer src="js/form.js"></script>
   </body>
 </html>
